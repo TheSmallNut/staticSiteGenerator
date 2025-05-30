@@ -16,13 +16,6 @@ def copy_files_recursive(source_dir_path, dest_dir_path):
             copy_files_recursive(from_path, dest_path)
 
 
-def generate_pages_recursive(dir_path_content, template_path, dest_dir_path):
-    markdown_texts = []
-    for root, _, files in os.walk(dir_path_content):
-        for file in files:
-            if file.endswith(".md"):
-                with open(os.path.join(root, file), "r", encoding="utf-8") as f:
-                    text = f.read()
 
 
 
